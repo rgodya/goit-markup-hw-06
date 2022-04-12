@@ -343,7 +343,7 @@
           <a class="footer-logo" href="./" lang="en">Web<span class="logo-color">Studio</span></a>
           <ul class="footer-contacts list">
             <li class="foot-list">
-              <a class="footer-adress" href="">Волоколамское шоссе, д. 17, офис 392</a>
+              <a class="footer-adress" href="">г. Киев, пр-т Леси Украинки, 26</a>
             </li>
             <li class="foot-list">
               <a class="footer-cont" href="tel:+380961111111">+38 096 111 11 11</a>
@@ -386,9 +386,32 @@
             </li>
           </ul>
         </div>
+        <div class="contact-form-footer-wrapper">
+          <p class="footer-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
+          <form>
+            <div class="contact-form-icon_footer">
+              <label class="label-text-footer" for="user_email_footer">
+                <input
+                  type="email"
+                  class="contact-form-input-footer"
+                  name="email"
+                  id="user_email_footer"
+                  required
+                  placeholder="E-mail"
+                />
+              </label>
+              <button type="button" class="button mail-button" data-modal-open>
+                Подписаться
+                <svg class="send" width="24" height="24">
+                  <use href="./images/symbol-defs-three.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-close-icon" width="11" height="11">
