@@ -924,7 +924,7 @@ img {
   justify-content: center;
 }
 
-/* .send {
-  p-left: 10px;
-} */
-/* Подпишитесь на розсылку */
+.send-mail {
+  position: absolute;
+  right: 28px;
+}
