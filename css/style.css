@@ -696,6 +696,15 @@ img {
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: none;
+  color: var(--primery-white-color);
+}
+
+.contact-form-input-footer::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  font-weight: 400;
 }
 
 .mail-button {
@@ -716,6 +725,11 @@ img {
   border-radius: 4px;
   margin-left: 12px;
   cursor: pointer;
+}
+
+.send-mail {
+  position: absolute;
+  right: 28px;
 }
 
 /* Модальне вікно */
@@ -867,27 +881,38 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.checkbox {
-  position: absolute;
-}
-
 .checkbox-contract {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  position: relative;
 }
 
 .checkbox-contract-text {
   color: var(--primery-text-color);
 }
 
-.checkbox-contract-text::before {
-  display: inline-block;
-  content: ;
-  width: 25px;
-  height: 25px;
-  background-color: tomato;
+.checkbox-icon-box {
+  position: absolute;
+  width: 16px;
+  height: 15px;
   cursor: pointer;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  border-color: var(--title-text-color);
+  background-image: url(../images/svg/checkboxborder.svg);
+}
+
+.chekbox {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.chekbox:checked + .checkbox-icon-box {
+  background-image: url(../images/svg/checkbox2.svg);
 }
 
 .text-color-contract {
@@ -913,6 +938,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .contact-form-button:hover {
@@ -922,9 +948,4 @@ img {
 .contact-form-button-wrapper {
   display: flex;
   justify-content: center;
-}
-
-.send-mail {
-  position: absolute;
-  right: 28px;
 }
