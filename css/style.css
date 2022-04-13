@@ -112,7 +112,7 @@ img {
 .link.current::after {
   position: absolute;
   content: '';
-  bottom: 0px;
+  bottom: -1px;
   display: block;
   width: 100%;
   height: 4px;
@@ -193,7 +193,7 @@ img {
 
 .overlay {
   height: 600px;
-  outline: 1p solid color black;
+  outline: 1pх solid color black;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -886,33 +886,25 @@ img {
   justify-content: center;
   margin-bottom: 30px;
   position: relative;
-}
-
-.checkbox-contract-text {
-  color: var(--primery-text-color);
-}
-
-.checkbox-icon-box {
-  position: absolute;
-  width: 16px;
-  height: 15px;
+  align-items: center;
   cursor: pointer;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 4px;
-  border-color: var(--title-text-color);
-  background-image: url(../images/svg/checkboxborder.svg);
 }
 
-.chekbox {
-  -webkit-appearance: none;
-  appearance: none;
-  position: absolute;
+.chekbox:checked + .checkbox-contract-label::before {
+  background-image: url(../images/svg/checkbox.svg);
+  border: none;
 }
 
-.chekbox:checked + .checkbox-icon-box {
-  background-image: url(../images/svg/checkbox2.svg);
+.chekbox:focus + .checkbox-contract-label::before {
+  outline: 1px solid var(--title-text-color);
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-contract-label {
+  color: var(--primery-text-color);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .text-color-contract {
@@ -922,6 +914,17 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: underline;
+}
+
+.checkbox-contract-label::before {
+  display: inline-block;
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  margin-right: 10px;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
 .contact-form-button {
