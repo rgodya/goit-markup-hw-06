@@ -193,7 +193,7 @@ img {
 
 .overlay {
   height: 600px;
-  outline: 1pх solid color var(--title-text-color);
+  outline: 1pх solid var(--title-text-color);
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
